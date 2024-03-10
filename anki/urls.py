@@ -21,6 +21,7 @@ from cards import views
 # Подключаем файл urls.py из приложения cards через include
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.main),
     path('catalog/', views.catalog),
     path('<int:card_id>/', views.get_card_by_id),
     path('<slug:slug>/', views.get_category_by_name),
